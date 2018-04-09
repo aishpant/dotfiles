@@ -1,0 +1,6 @@
+mutt/
+offlineimap/
+pypi/
+misc/.netrc
+misc/.esmtprc
+vim/.vim/swap/*

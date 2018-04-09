@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/a/projects/linux/Documentation/ABI/testing'
+let g:netrw_dirhist_2='/home/a/projects/doc/sysfs-docgen'
+let g:netrw_dirhist_3='/home/a/projects/site-source'
+let g:netrw_dirhist_4='/home/a/projects/linux/drivers/staging/irda'
+let g:netrw_dirhist_5='/home/a/projects/go'
+let g:netrw_dirhist_6='/home/a/go/src/github.com/aishpant/crawler'
