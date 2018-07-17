@@ -100,3 +100,9 @@ export TERM=xterm
 source "/home/a/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 export GOPATH=$HOME/projects/go
 export PATH=$GOPATH/bin:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/a/Downloads/google-cloud-sdk-199.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc' ]; then source '/home/a/Downloads/google-cloud-sdk-199.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/a/Downloads/google-cloud-sdk-199.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/a/Downloads/google-cloud-sdk-199.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc'; fi
