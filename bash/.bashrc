@@ -10,3 +10,5 @@ PS1='[\u@\h \W]\$ '
 
 export VISUAL="vim"
 export EDITOR="vim"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -1,13 +1,14 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/a/.oh-my-zsh
+export ZSH="/Users/aishwaryapant/.oh-my-zsh"
+
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME="spaceship"
@@ -63,7 +64,7 @@ git z tig command-not-found sudo
 )
 
 source $ZSH/oh-my-zsh.sh
-eval `dircolors ~/.dir_colors/dircolors`
+# eval `dircolors ~/.dir_colors/dircolors`
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -82,7 +83,7 @@ export VISUAL='vim'
 export EDITOR='vim'
 
 # Compilation flags
- export ARCHFLAGS="-arch x86_64"
+ # export ARCHFLAGS="-arch x86_64"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -96,13 +97,37 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export TERM=xterm
-source "/home/a/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
-export GOPATH=$HOME/projects/go
+export TERM=screen-256color
+ # source "/Users/aishwaryapant/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+if [ -z $(pgrep gpg-agent) ]; then gpg-agent --daemon; fi
+
+alias monzo-update='sh /Users/aishwaryapant/.onboarding/monzo-update.sh'
+alias monzo-eng1='sh /Users/aishwaryapant/.onboarding/monzo-eng1.sh'
+alias monzo-eng2='sh /Users/aishwaryapant/.onboarding/monzo-eng2.sh'
+alias monzo-eng3='sh /Users/aishwaryapant/.onboarding/monzo-eng3.sh'
+NO_MONZO_SSH=true
+[ -f $HOME/src/github.com/monzo/starter-pack/zshrc ]   && source $HOME/src/github.com/monzo/starter-pack/zshrc
+
+export GOPATH=$HOME
 export PATH=$GOPATH/bin:$PATH
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/a/Downloads/google-cloud-sdk-199.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc' ]; then source '/home/a/Downloads/google-cloud-sdk-199.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc'; fi
+# Set Spaceship ZSH as a prompt
+ # autoload -U promptinit; promptinit
+ # prompt spaceship
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/a/Downloads/google-cloud-sdk-199.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/a/Downloads/google-cloud-sdk-199.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc'; fi
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source ~/.bash_profile
+export PYENV_ROOT=/usr/local/var/pyenv
+export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
+if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
+
+
+source /Users/aishwaryapant/src/github.com/monzo/analytics/dbt/misc/shell/source.sh
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

@@ -1,13 +1,15 @@
+[url "ssh://git@github.com/monzo/"]
+	insteadOf = https://github.com/monzo/
 [color]
 	ui = auto
 [user]
 	name = Aishwarya Pant
-	email = aishpant@gmail.com
+	email = aishwaryapant@monzo.com
 [sendmail]
 	smtpserver = /usr/bin/esmtp
 [core]
-	gitignore = /home/a/.gitignore
-	excludesfile = /home/a/.gitignore
+	gitignore = /Users/aishwaryapant/.gitignore
+	excludesfile = /Users/aishwaryapant/.gitignore
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
@@ -45,3 +47,5 @@
 	sl = stash list
 	sa = stash apply
 	ss = stash save
+[commit]
+	verbose = true

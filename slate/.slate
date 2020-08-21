@@ -1,0 +1,34 @@
+#-----------------------------------------------
+# Slate template file, thanks to Jeryn
+#-----------------------------------------------
+
+config checkDefaultsOnLoad              true
+config defaultToCurrentScreen           true
+config focusCheckWidthMax               3000
+config secondsBetweenRepeat             0.1
+
+# Abstract positions
+alias full              move screenOriginX;screenOriginY                screenSizeX;screenSizeY
+alias lefthalf          move screenOriginX;screenOriginY                screenSizeX/2;screenSizeY
+alias righthalf         move screenOriginX+screenSizeX/2;screenOriginY  screenSizeX/2;screenSizeY
+
+# HYPER KEY
+alias hyper cmd
+
+# Location bindings
+bind left:${hyper} ${lefthalf}
+bind right:${hyper} ${righthalf}
+bind up:${hyper} ${full}
+
+# Send active window to second monitor
+bind down:${hyper} throw next resize
+
+# Application aliases
+alias browser  'Google Chrome'
+alias terminal 'iTerm2'
+alias slack    'Slack'
+
+# App bindings
+bind 1:${hyper} focus ${browser}
+bind 3:${hyper} focus ${terminal}
+bind 4:${hyper} focus ${slack}

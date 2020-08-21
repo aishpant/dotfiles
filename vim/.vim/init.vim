@@ -1,0 +1,1 @@
+/Users/aishwaryapant/.vimrc
