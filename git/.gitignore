@@ -1,3 +1,0 @@
-*.cocci
-funcs.txt
-send-patchset.sh
